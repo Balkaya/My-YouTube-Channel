@@ -8,15 +8,20 @@
 
 import UIKit
 
-class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     var urlText = ""
+    var searchVideos = [Video]()
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavBar()
+        
+        searchVideos = videos
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -31,10 +36,14 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func setupNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        let searchController = UISearchController(searchResultsController: nil)
-        navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
+        
+        searchController.searchResultsUpdater = self as? UISearchResultsUpdating
+        searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Find video"
+        searchController.searchBar.keyboardAppearance = .dark
+        navigationItem.searchController = searchController
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -50,5 +59,19 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableViewCell
         cell?.configure(videos[indexPath.row])
         return cell!
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchVideos = videos.filter({ video -> Bool in
+            if searchText.isEmpty { return true }
+            return video.title.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        searchVideos = videos
+        tableView.reloadData()
     }
 }
