@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A01666B23649D5C00AF5C76 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01666A23649D5C00AF5C76 /* TableViewCell.swift */; };
+		3A01666D23649DF100AF5C76 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01666C23649DF100AF5C76 /* WebVC.swift */; };
+		3A0166712364A90500AF5C76 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0166702364A90500AF5C76 /* Video.swift */; };
 		3A7B373B223C08E8008FEAB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B373A223C08E8008FEAB2 /* AppDelegate.swift */; };
 		3A7B3740223C08E8008FEAB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7B373E223C08E8008FEAB2 /* Main.storyboard */; };
 		3A7B3742223C08E9008FEAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A7B3741223C08E9008FEAB2 /* Assets.xcassets */; };
 		3A7B3745223C08E9008FEAB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7B3743223C08E9008FEAB2 /* LaunchScreen.storyboard */; };
 		3A7B374D223C0A1C008FEAB2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3A7B374C223C0A1C008FEAB2 /* README.md */; };
-		3AD54DBE224C0281009E0EBC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD54DBD224C0281009E0EBC /* TabBarController.swift */; };
+		3AD54DBE224C0281009E0EBC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD54DBD224C0281009E0EBC /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A01666A23649D5C00AF5C76 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3A01666C23649DF100AF5C76 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		3A0166702364A90500AF5C76 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		3A7B3737223C08E8008FEAB2 /* My YouTube Channel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My YouTube Channel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7B373A223C08E8008FEAB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A7B373F223C08E8008FEAB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -23,7 +29,7 @@
 		3A7B3744223C08E9008FEAB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A7B3746223C08E9008FEAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7B374C223C0A1C008FEAB2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		3AD54DBD224C0281009E0EBC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3AD54DBD224C0281009E0EBC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				3A7B373A223C08E8008FEAB2 /* AppDelegate.swift */,
-				3AD54DBD224C0281009E0EBC /* TabBarController.swift */,
+				3AD54DBD224C0281009E0EBC /* MainVC.swift */,
+				3A01666A23649D5C00AF5C76 /* TableViewCell.swift */,
+				3A01666C23649DF100AF5C76 /* WebVC.swift */,
+				3A0166702364A90500AF5C76 /* Video.swift */,
 				3A7B373E223C08E8008FEAB2 /* Main.storyboard */,
 				3A7B3741223C08E9008FEAB2 /* Assets.xcassets */,
 				3A7B3743223C08E9008FEAB2 /* LaunchScreen.storyboard */,
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A01666B23649D5C00AF5C76 /* TableViewCell.swift in Sources */,
+				3A01666D23649DF100AF5C76 /* WebVC.swift in Sources */,
 				3A7B373B223C08E8008FEAB2 /* AppDelegate.swift in Sources */,
-				3AD54DBE224C0281009E0EBC /* TabBarController.swift in Sources */,
+				3AD54DBE224C0281009E0EBC /* MainVC.swift in Sources */,
+				3A0166712364A90500AF5C76 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6566UJZ5Y4;
+				DEVELOPMENT_TEAM = 84X92G2X4P;
 				INFOPLIST_FILE = "My YouTube Channel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,7 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6566UJZ5Y4;
+				DEVELOPMENT_TEAM = 84X92G2X4P;
 				INFOPLIST_FILE = "My YouTube Channel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
