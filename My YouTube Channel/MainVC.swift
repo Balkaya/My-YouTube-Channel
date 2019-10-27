@@ -47,17 +47,17 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        urlText = videos[indexPath.row].url
+        urlText = searchVideos[indexPath.row].url
         performSegue(withIdentifier: "toWebVC", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return videos.count
+        return searchVideos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableViewCell
-        cell?.configure(videos[indexPath.row])
+        cell?.configure(searchVideos[indexPath.row])
         return cell!
     }
     
