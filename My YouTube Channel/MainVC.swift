@@ -20,7 +20,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         super.viewDidLoad()
         
         setupNavBar()
-        
         searchVideos = videos
         
         tableView.dataSource = self
